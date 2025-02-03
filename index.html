@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="text">
+        <strong>Will you be my Valentine?</strong>
+        <p>(Don't click No)</p>
+    </div>
+    <div class="buttons">
+        <button class="yes" onclick="window.location.href='hp.html'">Yes</button>
+        <button class="no" onclick="showNewYes()">No </button>
+    </div>
+    <div class="new-yes-buttons"></div>
+
+    <script>
+        // Function to show a new Yes button when No is clicked
+        function showNewYes() {
+            const newYesButton = document.createElement('button');
+            newYesButton.textContent = 'Yes';
+            newYesButton.classList.add('yes');
+            newYesButton.onclick = function() {
+                window.location.href = 'index.html';
+            };
+
+            // Append the new button to the 'new-yes-buttons' div
+            document.querySelector('.new-yes-buttons').appendChild(newYesButton);
+        }
+    </script>
+
+
+</body>
