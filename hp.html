@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Envelope + Letter (Open/Close on Click)</title>
+    <link rel="stylesheet" href="./style1.css">
+</head>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Hey the most cute,handsome,intelligent,caring,sweet boy I've ever met</strong>
+                        <p>
+                            <b>This is for you !</b>
+                        </p> 
+                        <p>
+                            I am very grateful to have you in my life.
+                            Never thought theat I would be with someone like you who would love me this much.
+                            How lucky I am that I got to spend my teenage years with the person I wanna grow old with.
+                            I love you so much.
+                            My only valentine I wish to have forever❤️
+                        </p>
+                       
+        
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
+</body>
+</html>
