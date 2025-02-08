@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(156, 16, 70);
+    font-family: 'Poppins';
+    flex-direction: column;
+    text-align: center;
+}
+.container {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.text {
+    color: #ecd9d9;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Styling for the buttons container */
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* Styling for each button */
+button {
+    padding: 10px 20px;
+    font-size: 1.0rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Styling for the Yes button */
+.yes {
+    background-color: #28a745; /* green */
+    color: white;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.yes:hover {
+    background-color: #218838;
+}
+
+/* Styling for the No button */
+.no {
+    background-color: #dc3545; /* red */
+    color: white;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.no:hover {
+    background-color: #c82333;
+}
+.fheart {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(249, 126, 159);
+    transform: rotate(-45deg);
+    margin: 50px auto;
+    animation: beat 1s infinite alternate;
+}
+
+.fheart::before,
+.fheart::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(249, 126, 159);
+    border-radius: 50%;
+}
+
+.fheart::before {
+    top: -15px;
+    left: 0;
+}
+
+.fheart::after {
+    top: 0;
+    left: 15px;
+}
+
+@keyframes beat {
+    0% { transform: scale(1) rotate(-45deg); }
+    100% { transform: scale(1.2) rotate(-45deg); }
+}
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+@keyframes sway {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(30px);
+    }
+}
